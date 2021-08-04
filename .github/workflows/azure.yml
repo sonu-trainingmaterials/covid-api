@@ -30,8 +30,8 @@ jobs:
 
     - uses: actions/upload-artifact@v2.2.4
       with:
-        path: ./covid-api/dist/
-
+        path: ./dist
+        
   deploy:
     needs: build
     runs-on: ubuntu-latest
