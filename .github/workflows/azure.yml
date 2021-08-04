@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -31,10 +31,10 @@ jobs:
     - uses: actions/upload-artifact@v2.2.4
       with:
         path: ./dist
-        
+
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Download published artifact
